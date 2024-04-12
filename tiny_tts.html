@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>speak with TTS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0 0 2em 0;background:#282828;color:#dcb;text-align:center;}
+input,select,textarea,button{filter:invert(1);color:#444;}
+button{padding:.2em .4em;}
+textarea{width:calc(100vw - 2em);max-width:720px;}
+#pour_ff{color:#f44;}
+.label{display:block;color:#0bf;margin:.6em auto;padding:.4em 0;width:100vw;max-width:800px;background:#0001;}
+</style>
+<script src="script.js"></script>
+</head><body>
+
+<div><div class="label">1) Langue</div><select id="speech_lang"></select></div>
+
+<div><div class="label">2) Filtrer les noms:</div><input id="text_search" placeholder="ou laisser vide"></div>
+
+<div><div class="label">3) Choix de la voix</div><div id="pour_ff"></div><select id="speech_voice"></select></div>
+
+<div><div class="label">4) Vitesse</div><input type="range" min="0.5" max="2" value="1" step="0.1" id="speech_speed"></div>
+
+<div><div class="label">5) Aigue</div><input type="range" min="0" max="2" value="1" step="0.1" id="speech_pitch"></div>
+
+<div><div class="label">6) Texte et écoute</div><textarea placeholder="what i speak" name="" id="txt_in" rows="5"></textarea><br>
+<button id="btn_go">Ecouter</button> <button id="rand_go">Random</button><br><span id="voice_is"></span>
+</div>
+
+</body></html>
