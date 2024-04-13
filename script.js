@@ -21,7 +21,7 @@ const search= {
 	f: _=>{
 
 		search.txt= (val=>{ if(val==""){return " ";}return val.toLowerCase(); })( _sel("#text_search").value );
-		for( const elem of _sels("select option")){
+		for( const elem of _sels("#speech_voice option")){
 			elem.style.display= elem.innerText.toLowerCase().includes(search.txt)? "inline": "none";
 		}
 	}
